@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Test Result</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <a href="NewCashRegisterBasics.html">FruitShop Basics</a>
+            <span class="float-right">
+              <i class="icon-ok passed" title="Successful with FruitShop"> </i>
+            </span>
+          </li>
+          <li class="file">
+            <a href="NewCashRegisterWithGreatDiscounts.html">FruitShop with localization and great discounts</a>
+            <span class="float-right">
+              <i class="icon-ok passed" title="Successful with FruitShop"> </i>
+            </span>
+          </li>
+          <li class="file">
+            <a href="NewCashRegisterWithLocalization.html">FruitShop with localization supported and new discounts</a>
+            <span class="float-right">
+              <i class="icon-ok passed" title="Successful with FruitShop"> </i>
+            </span>
+          </li>
+          <li class="file">
+            <span class="current">Test Result</span>
+          </li>
+          <li>
+            <div class="directory">
+              <a href="packages/index.html">packages</a>
+            </div>
+            <ul class="features">
+              <li>
+                <div class="directory">
+                  <a href="packages/NUnit.2.6.0.html/index.html">NUnit 26012054</a>
+                </div>
+                <ul class="features">
+                  <li class="file">
+                    <a href="packages/NUnit.2.6.0.12054/license.html">license</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="directory">
+                  <a href="packages/SpecFlow.1.9.html/index.html">Spec Flow 190</a>
+                </div>
+                <ul class="features">
+                  <li class="file">
+                    <a href="packages/SpecFlow.1.9.0/changelog.html">changelog</a>
+                  </li>
+                  <li class="file">
+                    <a href="packages/SpecFlow.1.9.0/LICENSE.html">LICENSE</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="markdown">
+        <p>***** NewCashRegister.FruitShopBasicsFeature.BasicUsecaseNoDiscountAndNoRebate
+Given the store sells these products:
+  --- table step argument ---
+  | Product name | Price in cents |
+  | Pommes       | 100            |
+  | Bananes      | 150            |
+  | Cerises      | 75             |
+-&gt; done: NewCashRegisterSteps.GivenTheStoreSellsTheseProducts(&lt;table&gt;) (0,1s)
+When the customer buys 1 "Pommes"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(1, "Pommes") (0,0s)
+And the customer buys 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(2, "Cerises") (0,0s)
+Then the total price should be 250 cents
+-&gt; done: NewCashRegisterSteps.ThenTheAmountIs(250) (0,0s)
+***** NewCashRegister.FruitShopBasicsFeature.NewReductions
+Given the store sells these products:
+  --- table step argument ---
+  | Product name | Price in cents |
+  | Pommes       | 100            |
+  | Bananes      | 150            |
+  | Cerises      | 75             |
+-&gt; done: NewCashRegisterSteps.GivenTheStoreSellsTheseProducts(&lt;table&gt;) (0,0s)
+Given a discount on 2 "Bananes" for the price of 1
+-&gt; done: NewCashRegisterSteps.GivenADiscountForThePriceOf(2, "Bananes", 1) (0,0s)
+And a rebate of 30 cents when we buy 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.GivenRebateWhenWeBuy(30, 2, "Cerises") (0,0s)
+When the customer buys 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(2, "Cerises") (0,0s)
+And the customer buys 2 "Bananes"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(2, "Bananes") (0,0s)
+Then the total price should be 270 cents
+-&gt; done: NewCashRegisterSteps.ThenTheAmountIs(270) (0,0s)
+***** NewCashRegister.FruitShopBasicsFeature.TakeIntoAccountFewReductions
+Given the store sells these products:
+  --- table step argument ---
+  | Product name | Price in cents |
+  | Pommes       | 100            |
+  | Bananes      | 150            |
+  | Cerises      | 75             |
+-&gt; done: NewCashRegisterSteps.GivenTheStoreSellsTheseProducts(&lt;table&gt;) (0,0s)
+Given a rebate of 20 cents when we buy 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.GivenRebateWhenWeBuy(20, 2, "Cerises") (0,0s)
+When the customer buys 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(2, "Cerises") (0,0s)
+And the customer buys 1 "Pommes"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(1, "Pommes") (0,0s)
+Then the total price should be 230 cents
+-&gt; done: NewCashRegisterSteps.ThenTheAmountIs(230) (0,0s)
+***** NewCashRegister.FruitShopWithLocalizationAndGreatDiscountsFeature.CreateGreatDiscounts
+Given the store sells these products:
+  --- table step argument ---
+  | Product name | Price in cents |
+  | Pommes       | 100            |
+  | Bananes      | 150            |
+  | Cerises      | 75             |
+-&gt; done: NewCashRegisterSteps.GivenTheStoreSellsTheseProducts(&lt;table&gt;) (0,0s)
+And the localization of "Pommes" in "Apples"
+-&gt; done: NewCashRegisterSteps.GivenTheLocalizationOfIn("Pommes", "Apples") (0,0s)
+And the localization of "Pommes" in "Mele"
+-&gt; done: NewCashRegisterSteps.GivenTheLocalizationOfIn("Pommes", "Mele") (0,0s)
+Given these rebates in cents:
+  --- table step argument ---
+  | Product name | Quantity | Rebate in cents |
+  | Fruits       | 5        | 200             |
+  | * Pommes     | 4        | 100             |
+  | Cerises      | 2        | 20              |
+-&gt; done: NewCashRegisterSteps.GivenThisRebates(&lt;table&gt;) (0,0s)
+And a discount on 2 "Bananes" for the price of 1
+-&gt; done: NewCashRegisterSteps.GivenADiscountForThePriceOf(2, "Bananes", 1) (0,0s)
+And a rebate of 200 cents for 3 "Apples"
+-&gt; done: NewCashRegisterSteps.GivenARebateOfCentsFor(200, 3, "Apples") (0,0s)
+And a rebate of 100 cents for 2 "Mele"
+-&gt; done: NewCashRegisterSteps.GivenARebateOfCentsFor(100, 2, "Mele") (0,0s)
+When the customer buys these products:
+  --- table step argument ---
+  | Product name | Quantity |
+  | Mele         | 4        |
+  | Apples       | 4        |
+  | Bananes      | 1        |
+  | Pommes       | 1        |
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysTheseProducts(&lt;table&gt;) (0,0s)
+Then the total price should be 150 cents
+-&gt; done: NewCashRegisterSteps.ThenTheAmountIs(150) (0,0s)
+***** NewCashRegister.FruitShopWithLocalizationSupportedAndNewDiscountsFeature.LocalizationSupport
+Given the store sells these products:
+  --- table step argument ---
+  | Product name | Price in cents |
+  | Pommes       | 100            |
+  | Bananes      | 150            |
+  | Cerises      | 75             |
+-&gt; done: NewCashRegisterSteps.GivenTheStoreSellsTheseProducts(&lt;table&gt;) (0,0s)
+And the localization of "Pommes" in "Apples"
+-&gt; done: NewCashRegisterSteps.GivenTheLocalizationOfIn("Pommes", "Apples") (0,0s)
+And the localization of "Pommes" in "Mele"
+-&gt; done: NewCashRegisterSteps.GivenTheLocalizationOfIn("Pommes", "Mele") (0,0s)
+Given a discount on 2 "Bananes" for the price of 1
+-&gt; done: NewCashRegisterSteps.GivenADiscountForThePriceOf(2, "Bananes", 1) (0,0s)
+And a rebate of 20 cents when we buy 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.GivenRebateWhenWeBuy(20, 2, "Cerises") (0,0s)
+When the customer buys 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(2, "Cerises") (0,0s)
+And the customer buys 1 "Apples"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(1, "Apples") (0,0s)
+And the customer buys 2 "Bananes"
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysSomeProducts(2, "Bananes") (0,0s)
+Then the total price should be 380 cents
+-&gt; done: NewCashRegisterSteps.ThenTheAmountIs(380) (0,0s)
+***** NewCashRegister.FruitShopWithLocalizationSupportedAndNewDiscountsFeature.NewDiscountsBasedOnTheLocalization
+Given the store sells these products:
+  --- table step argument ---
+  | Product name | Price in cents |
+  | Pommes       | 100            |
+  | Bananes      | 150            |
+  | Cerises      | 75             |
+-&gt; done: NewCashRegisterSteps.GivenTheStoreSellsTheseProducts(&lt;table&gt;) (0,0s)
+And the localization of "Pommes" in "Apples"
+-&gt; done: NewCashRegisterSteps.GivenTheLocalizationOfIn("Pommes", "Apples") (0,0s)
+And the localization of "Pommes" in "Mele"
+-&gt; done: NewCashRegisterSteps.GivenTheLocalizationOfIn("Pommes", "Mele") (0,0s)
+Given a discount on 2 "Bananes" for the price of 1
+-&gt; done: NewCashRegisterSteps.GivenADiscountForThePriceOf(2, "Bananes", 1) (0,0s)
+And a rebate of 200 cents for 3 "Apples"
+-&gt; done: NewCashRegisterSteps.GivenARebateOfCentsFor(200, 3, "Apples") (0,0s)
+And a rebate of 100 cents for 2 "Mele"
+-&gt; done: NewCashRegisterSteps.GivenARebateOfCentsFor(100, 2, "Mele") (0,0s)
+And a rebate of 20 cents when we buy 2 "Cerises"
+-&gt; done: NewCashRegisterSteps.GivenRebateWhenWeBuy(20, 2, "Cerises") (0,0s)
+When the customer buys these products:
+  --- table step argument ---
+  | Product name | Quantity |
+  | Mele         | 2        |
+  | Apples       | 3        |
+  | Pommes       | 1        |
+  | Cerises      | 2        |
+  | Bananes      | 1        |
+-&gt; done: NewCashRegisterSteps.WhenTheCustomerBuysTheseProducts(&lt;table&gt;) (0,0s)
+Then the total price should be 680 cents
+-&gt; done: NewCashRegisterSteps.ThenTheAmountIs(680) (0,0s)</p>
+      </div>
+      <div id="footer">
+        <p>Test results generated for: FruitShop</p>
+        <p>Pickled on: 9 novembre 2014 16:42:27</p>
+        <p>Produced by Pickles, version 0.18.2.0</p>
+      </div>
+    </div>
+  </body>
+</html>
