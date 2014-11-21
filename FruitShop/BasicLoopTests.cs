@@ -61,15 +61,7 @@ namespace FruitShop
             Assert.AreEqual(425, _basket.Price());
         }
 
-        [Test]
-        public void Debug()
-        {
-            _store.RegisterDiscountOnFreeProductWhenBuysSameProducts("Bananes", 2, 1);
-           
-            _basket.AddProducts("Bananes", 2);
-
-            Assert.AreEqual(150, _basket.Price());
-        }
+       
         [Test]
         public void Should_implement_new_reductions_when_we_price_some_articles()
         {
