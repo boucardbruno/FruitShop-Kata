@@ -42,6 +42,14 @@ namespace CashRegister
         {
             return _rulesDiscountedProducts.ContainsKey(productName);
         }
+
+        public void Reset()
+        {
+            foreach (var rule in _rulesDiscountedProducts.Values)
+            {
+                rule.Reset();
+            }
+        }
     }
 }
 

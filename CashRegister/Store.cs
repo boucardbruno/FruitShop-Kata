@@ -30,9 +30,11 @@ namespace CashRegister
         {
             productName.Check("productName");
 
-            return IsDiscountedProduct(productName) ? 
+            decimal result = IsDiscountedProduct(productName) ? 
                 HandlePriceDiscounted(productName, HandlePriceMetaProductNameDiscounted())
-              : HandlePrice(productName, HandlePriceMetaProductNameDiscounted());         
+              : HandlePrice(productName, HandlePriceMetaProductNameDiscounted());
+           
+            return result;
         }
 
         public void RegisterDiscountOnFreeProductWhenBuysSameProducts(string productName, uint quantity, uint freeProductsQuantity)
@@ -91,6 +93,11 @@ namespace CashRegister
         private bool IsDiscountedProduct(string productName)
         {
             return _discount.IsDiscounted(productName);
-        }        
+        }
+
+        public void ResetDiscounts()
+        {
+            _discount.Reset();
+        }
     }
 }

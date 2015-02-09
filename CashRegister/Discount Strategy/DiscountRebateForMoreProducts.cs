@@ -12,7 +12,6 @@
       
         public override decimal ApplyDiscount(decimal defaultPrice)
         {
-            Count = 0;
             return defaultPrice - _rebate;
         }
     }

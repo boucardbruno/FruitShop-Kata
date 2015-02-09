@@ -17,7 +17,9 @@ namespace CashRegister
      
         public decimal Price()
         {
-            return _productsBought.Sum(productName => _store.ComputePrice(productName));
+            var price = _productsBought.Sum(productName => _store.ComputePrice(productName));
+            _store.ResetDiscounts();
+            return price;
         }
 
         public void AddProducts(string productName, uint quantity)

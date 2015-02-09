@@ -17,11 +17,17 @@
             
             if (Count.IsDiscountable(Quantity))
             {
+                Count = 0;
                 return ApplyDiscount(defaultPrice);
             }
             return defaultPrice;
         }
 
         public abstract decimal ApplyDiscount(decimal defaultPrice);
+
+        public void Reset()
+        {
+            Count = 0;
+        }
     }
 }

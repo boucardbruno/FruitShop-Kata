@@ -11,7 +11,6 @@ namespace CashRegister
         
         public override decimal ApplyDiscount(decimal defaultPrice)
         {
-            Count = 0;
             return  - (_freeProducts - 1) * defaultPrice; ;
         }
     }
