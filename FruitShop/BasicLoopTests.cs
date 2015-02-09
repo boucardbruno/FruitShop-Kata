@@ -33,6 +33,7 @@ namespace FruitShop
         [Test]
         public void Should_compute_the_expected_price_when_a_customer_buys_few_articles()
         {
+            // Iteration 1 - Vérifications
             _basket.AddProducts("Cerises", 2);
             _basket.AddProducts("Pommes", 2);
             _basket.AddProducts("Bananes", 1);
@@ -43,6 +44,7 @@ namespace FruitShop
         [Test]
         public void Should_apply_20_cents_discount_for_2_batches_of_cerises_when_a_customer_buys_some_articles()
         {
+            // Iteration 2 - Vérifications
             _store.RegisterDiscountRebateForMoreProducts("Cerises", 2, 20);
             _basket.AddProducts("Cerises", 4);
             _basket.AddProducts("Pommes", 2);
@@ -54,6 +56,7 @@ namespace FruitShop
         [Test]
         public void Should_support_new_CSV_input_when_we_price_some_articles()
         {
+            // Iteration 3 - Tests
             _store.RegisterDiscountRebateForMoreProducts("Cerises", 2, 20);
             _basket.AddBatch("Pommes, Cerises, Bananes");
             _basket.AddBatch("Pommes");
@@ -65,6 +68,7 @@ namespace FruitShop
         [Test]
         public void Should_implement_new_reductions_when_we_price_some_articles()
         {
+            // Iteration 3' - Vérifications
             _store.RegisterDiscountRebateForMoreProducts("Cerises", 2, 30);
             _store.RegisterDiscountOnFreeProductWhenBuysSameProducts("Bananes", 2, 1);
          
@@ -78,6 +82,7 @@ namespace FruitShop
         [Test]
         public void Should_support_new_localization_when_we_price_some_product_name_in_italian_and_english()
         {
+            // Iteration 4 - Vérifications
             SupportLocalization();
 
             _store.RegisterDiscountRebateForMoreProducts("Cerises", 2, 20);
@@ -95,6 +100,7 @@ namespace FruitShop
         [Test]
         public void Should_add_new_discounts_about_Apples_and_about_Mele_when_we_price()
         {
+            // Iteration 5' - Vérifications
             SupportLocalization();
 
             _store.RegisterDiscountRebateForMoreProducts("Cerises", 2, 20);
@@ -116,6 +122,7 @@ namespace FruitShop
         [Test]
         public void Should_add_new_great_discounts_about_fruits_and_about_Pommes_family_when_price_the_total_bill()
         {
+            // Iteration 6 - Vérifications
             SupportLocalization();
 
             _store.RegisterRebateOnMoneyWhenBuysQuantityfProducts("Fruits", 5, 200);

@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
@@ -100,7 +100,7 @@
   <PropertyGroup>
     <PostBuildEvent>rd /s /q "$(ProjectDir)reports"
 nunit-console.exe /labels /out="$(ProjectDir)TestResult.txt" /xml="$(ProjectDir)TestResult.xml"  "$(TargetPath)"
-pickles -f "$(SolutionDir)$(TargetName)" -o "$(ProjectDir)reports" --test-results-formats=nunit --sn "FruitShop" --lr "$(ProjectDir)TestResult.xml"</PostBuildEvent>
+pickles -f "$(ProjectDir)." -o "$(ProjectDir)reports" --test-results-formats=nunit --sn "FruitShop" --lr "$(ProjectDir)TestResult.xml"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

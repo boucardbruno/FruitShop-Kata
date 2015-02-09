@@ -14,6 +14,7 @@ Background:
 	And the localization of "Pommes" in "Mele"
 
 Scenario: Create great discounts
+    Iteration 6 - Tests
 	4 Pommes purchased, 1 € reduction for the total amaunt of bill 
 	5 fruits purchased, 2 € discount
 	2 bananas for the price of 1

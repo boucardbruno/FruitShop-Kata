@@ -14,6 +14,7 @@ Background:
 	And the localization of "Pommes" in "Mele"
 
 Scenario: Localization support
+    Tests - Iteration 4
 	Few products are translated in english and italian 
 	Modification: for 2 batches of cerises purchased 30 cents discount is applied.    
 
@@ -24,7 +25,8 @@ Scenario: Localization support
 	And the customer buys 2 "Bananes" 
 	Then the total price should be 380 cents
 
-Scenario: New discounts based on the localization 
+Scenario: New discounts based on the localization
+    Tests - Iteration 5' 
 	3 batches of "Apples" worth 2 €
 	2 batches of "Mele" worth 1 €
 
