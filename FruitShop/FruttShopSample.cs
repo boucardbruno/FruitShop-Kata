@@ -2,20 +2,20 @@
 
 namespace FruitShop
 {
-    class BasicLoop
+    class FruitShopSample
     {
-        public void Loop()
+        public void Run()
         {
             String input;
             Console.WriteLine("> ");
             while ((input = Console.ReadLine()) != null)
             {
-                Console.WriteLine(DoSomethingWithInput(input));
+                Console.WriteLine(Format(input));
                 Console.WriteLine("> ");
             }
         }
 
-        public String DoSomethingWithInput(String input)
+        public String Format(String input)
         {
             return "> " + input;
         }

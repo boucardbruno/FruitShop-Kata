@@ -22,7 +22,7 @@ namespace CashRegister
             return price;
         }
 
-        public void AddProducts(string productName, uint quantity)
+        public void Add(string productName, uint quantity)
         {
             productName.Check("productName");
             

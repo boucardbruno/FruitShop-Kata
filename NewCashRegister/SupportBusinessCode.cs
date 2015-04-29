@@ -21,7 +21,7 @@ namespace NewCashRegister
 
         internal void BuyProducts(string productName, uint quantity)
         {
-            _basket.AddProducts(productName, quantity);         
+            _basket.Add(productName, quantity);         
         }
 
         internal void RegisterDiscountBasedOnFreeProductWhenCustomerBuysSeveralSameProducts(string productName, uint quantity, uint freeProductsQuantity)

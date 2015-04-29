@@ -4,7 +4,7 @@ As a manager in a store called "FruitShop",
 I want to increase profits with a new cash register
 
 Background: 
-	
+	![Text Alt](Pomme.jpg)
 	Given the store sells these products:
 	| Product name  | Price in cents |
 	| Pommes	    | 100			 |
@@ -14,9 +14,8 @@ Background:
 	And the localization of "Pommes" in "Mele"
 
 Scenario: Localization support
-    Tests - Iteration 4
-	Few products are translated in english and italian 
-	Modification: for 2 batches of cerises purchased 30 cents discount is applied.    
+    <b>Iteration 4: Few products are translated in english and italian. 
+	Modification: for 2 batches of cerises purchased 30 cents discount is applied.</b>    
 
 	Given a discount on 2 "Bananes" for the price of 1 
 	And a rebate of 20 cents when we buy 2 "Cerises"
@@ -26,9 +25,8 @@ Scenario: Localization support
 	Then the total price should be 380 cents
 
 Scenario: New discounts based on the localization
-    Tests - Iteration 5' 
-	3 batches of "Apples" worth 2 €
-	2 batches of "Mele" worth 1 €
+    <b>Iteration 5': 3 batches of "Apples" worth 2 €.
+	2 batches of "Mele" worth 1 €.</b>
 
 	Given a discount on 2 "Bananes" for the price of 1 
 	And a rebate of 200 cents for 3 "Apples" 

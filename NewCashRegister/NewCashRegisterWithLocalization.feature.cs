@@ -99,17 +99,17 @@ namespace NewCashRegister
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 21
+#line 20
  testRunner.Given("a discount on 2 \"Bananes\" for the price of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 22
+#line 21
  testRunner.And("a rebate of 20 cents when we buy 2 \"Cerises\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
+#line 22
  testRunner.When("the customer buys 2 \"Cerises\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 23
  testRunner.And("the customer buys 1 \"Apples\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
+#line 24
  testRunner.And("the customer buys 2 \"Bananes\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
+#line 25
  testRunner.Then("the total price should be 380 cents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -120,17 +120,17 @@ this.FeatureBackground();
         public virtual void NewDiscountsBasedOnTheLocalization()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New discounts based on the localization", ((string[])(null)));
-#line 28
+#line 27
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 33
+#line 31
  testRunner.Given("a discount on 2 \"Bananes\" for the price of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 34
+#line 32
  testRunner.And("a rebate of 200 cents for 3 \"Apples\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
+#line 33
  testRunner.And("a rebate of 100 cents for 2 \"Mele\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
+#line 34
  testRunner.And("a rebate of 20 cents when we buy 2 \"Cerises\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -151,9 +151,9 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "Bananes",
                         "1"});
-#line 37
+#line 35
  testRunner.When("the customer buys these products:", ((string)(null)), table2, "When ");
-#line 44
+#line 42
  testRunner.Then("the total price should be 680 cents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

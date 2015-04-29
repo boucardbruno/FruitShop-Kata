@@ -116,13 +116,13 @@ this.FeatureBackground();
                         "Cerises",
                         "2",
                         "20"});
-#line 22
+#line 21
  testRunner.Given("these rebates in cents:", ((string)(null)), table2, "Given ");
-#line 27
+#line 26
  testRunner.And("a discount on 2 \"Bananes\" for the price of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 27
  testRunner.And("a rebate of 200 cents for 3 \"Apples\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 28
  testRunner.And("a rebate of 100 cents for 2 \"Mele\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -140,9 +140,9 @@ this.FeatureBackground();
             table3.AddRow(new string[] {
                         "Pommes",
                         "1"});
-#line 30
+#line 29
  testRunner.When("the customer buys these products:", ((string)(null)), table3, "When ");
-#line 36
+#line 35
  testRunner.Then("the total price should be 150 cents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
