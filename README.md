@@ -1,4 +1,4 @@
 FruitShop
 =========
 
-Implementation in C# of kata FruitShop with gherkin and TDD.
+based on Jean-Laurent de Morlhon coding dojo : http://fr.slideshare.net/brunoboucard/fruit-shop-techdays-2015
